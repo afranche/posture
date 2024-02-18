@@ -1,0 +1,17 @@
+{
+  "name": "database",
+  "module": "index.ts",
+  "type": "module",
+  "main": "./index.ts",
+  "types": "./index.ts",
+  "devDependencies": {
+    "@types/bun": "latest",
+    "prisma": "^5.9.1"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "@prisma/client": "^5.9.1"
+  }
+}

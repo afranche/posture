@@ -1,0 +1,20 @@
+{
+  "name": "posture",
+  "module": "index.ts",
+  "type": "module",
+  "scripts": {
+    "back": "cd apps/backend && bun run",
+    "front": "cd apps/frontend && bun run",
+    "e2e": "echo \"🧪- e2e\""
+  },
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "workspaces": [
+    "apps/*",
+    "libs/*"
+  ]
+}
