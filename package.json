@@ -5,7 +5,7 @@
   "scripts": {
     "back": "cd apps/backend && bun run",
     "front": "cd apps/frontend && bun run",
-    "e2e": "echo \"🧪- e2e\""
+    "e2e": "echo \"🧪 E2E\""
   },
   "devDependencies": {
     "@types/bun": "latest"
