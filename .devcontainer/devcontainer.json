@@ -1,0 +1,29 @@
+{
+	"name": "Bun",
+	"build": {
+		"dockerfile": "Dockerfile"
+	},
+	"features": {
+		"ghcr.io/devcontainers/features/common-utils:2": {
+			"installZsh": "true",
+			"username": "node",
+			"upgradePackages": "true"
+		},
+		"ghcr.io/devcontainers/features/node:1": {
+			"version": "none"
+		},
+		"ghcr.io/devcontainers/features/git:1": {
+      "version": "latest",
+      "ppa": "false"
+    }
+	},
+	"customizations": {
+		"vscode": {
+			"extensions": [
+        "oven.bun-vscode",
+        "editorconfig.editorconfig"
+			]
+		}
+	},
+	"remoteUser": "node"
+}
