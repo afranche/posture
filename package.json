@@ -3,12 +3,15 @@
   "module": "index.ts",
   "type": "module",
   "scripts": {
-    "back": "cd apps/backend && bun run",
-    "front": "cd apps/frontend && bun run",
+    "backend": "cd apps/backend && bun run",
+    "frontend": "cd apps/frontend && bun run",
     "e2e": "echo \"🧪 E2E\""
   },
   "devDependencies": {
-    "@types/bun": "latest"
+    "@types/bun": "latest",
+    "eslint": "^8.56.0",
+    "typescript": "^5.3.3",
+    "typescript-eslint": "^7.0.2"
   },
   "peerDependencies": {
     "typescript": "^5.0.0"

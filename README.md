@@ -1,5 +1,8 @@
 # Posture
 
+[![Known Vulnerabilities][snyk-badge]][snyk-link]
+[![Codacy Badge][codacy-badge]][codacy-link]
+
 WIP Lightweight ASPM tool and vulnerability tracker
 
 ## Why ?
@@ -16,10 +19,21 @@ at what suits your organization more! :heart_hands:
 
 ## Getting Started
 
-### Docker
+### Docker Compose
 
-TODO:
+__Docker Compose only runs well for development since it's a WIP.__
+
+The easiest way to run Posture is through Docker Compose. All you need
+is creating a `.env` file in which you can fill the `POSTGRES_PASSWORD`
+variable. Once done, you should have posture working by running
+`docker compose up` in your terminal and :sparkles: Voilà! :sparkles:
 
 ### Kubernetes (Helm)
 
 TODO:
+
+[snyk-badge]: https://snyk.io/test/github/afranche/posture/badge.svg
+[snyk-link]: https://snyk.io/test/github/afranche/posture
+
+[codacy-badge]: https://app.codacy.com/project/badge/Grade/a998279965c94c9eab855019987f661a
+[codacy-link]: https://app.codacy.com/gh/afranche/posture/dashboard
