@@ -8,7 +8,10 @@
     "e2e": "echo \"🧪 E2E\""
   },
   "devDependencies": {
-    "@types/bun": "latest"
+    "@types/bun": "latest",
+    "eslint": "^8.56.0",
+    "typescript": "^5.3.3",
+    "typescript-eslint": "^7.0.2"
   },
   "peerDependencies": {
     "typescript": "^5.0.0"
