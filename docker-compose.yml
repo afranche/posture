@@ -1,0 +1,63 @@
+services:
+  database:
+    env_file:
+      - .env
+    environment:
+      - PGUSER=postgres
+    expose:
+      - 5432
+    healthcheck:
+      test: [ "CMD-SHELL", "pg_isready" ]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    image: postgres:16.2-alpine3.19
+    volumes:
+      - postgres-database:/var/lib/postgresql/data
+  # TODO: Add a migration step for prisma.
+  dependencies:
+    image: oven/bun:1.0-alpine
+    command: bun install
+    volumes:
+      - ./apps:/posture/apps
+      - ./bun.lockb:/posture/bun.lockb
+      - ./libs:/posture/libs
+      - ./node_modules:/posture/node_modules
+      - ./package.json:/posture/package.json
+    working_dir: /posture
+  backend:
+    command: bun backend dev
+    depends_on:
+      database:
+        condition: service_healthy
+      dependencies:
+        condition: service_completed_successfully
+    env_file:
+      - .env
+    image: oven/bun:1.0-alpine
+    ports:
+      - 3000:3000
+    volumes:
+      - ./apps:/posture/apps
+      - ./bun.lockb:/posture/bun.lockb
+      - ./libs:/posture/libs
+      - ./node_modules:/posture/node_modules
+      - ./package.json:/posture/package.json
+    working_dir: /posture
+  frontend:
+    command: bun frontend dev --host --port 3001
+    depends_on:
+      dependencies:
+        condition: service_completed_successfully
+    image: oven/bun:1.0-alpine
+    ports:
+      - 3001:3001
+    volumes:
+      - ./apps:/posture/apps
+      - ./bun.lockb:/posture/bun.lockb
+      - ./libs:/posture/libs
+      - ./node_modules:/posture/node_modules
+      - ./package.json:/posture/package.json
+    working_dir: /posture
+volumes:
+  postgres-database:
