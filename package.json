@@ -3,8 +3,8 @@
   "module": "index.ts",
   "type": "module",
   "scripts": {
-    "back": "cd apps/backend && bun run",
-    "front": "cd apps/frontend && bun run",
+    "backend": "cd apps/backend && bun run",
+    "frontend": "cd apps/frontend && bun run",
     "e2e": "echo \"🧪 E2E\""
   },
   "devDependencies": {
