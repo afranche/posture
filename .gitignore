@@ -10,7 +10,7 @@ yarn-error.log*
 lerna-debug.log*
 .pnpm-debug.log*
 
-# Caches 
+# Caches
 
 .cache
 
@@ -105,6 +105,8 @@ web_modules/
 .env.test.local
 .env.production.local
 .env.local
+
+.direnv
 
 # parcel-bundler cache (https://parceljs.org/)
 
