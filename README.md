@@ -1,6 +1,7 @@
 # Posture
 
-[![Known Vulnerabilities](https://snyk.io/test/github/afranche/posture/badge.svg)](https://snyk.io/test/github/afranche/posture) [![Codacy Badge](https://app.codacy.com/project/badge/Grade/a998279965c94c9eab855019987f661a)](https://app.codacy.com/gh/afranche/posture/dashboard)
+[![Known Vulnerabilities][snyk-badge]][snyk-link]
+[![Codacy Badge][codacy-badge]][codacy-link]
 
 WIP Lightweight ASPM tool and vulnerability tracker
 
@@ -30,3 +31,9 @@ variable. Once done, you should have posture working by running
 ### Kubernetes (Helm)
 
 TODO:
+
+[snyk-badge]: https://snyk.io/test/github/afranche/posture/badge.svg
+[snyk-link]: https://snyk.io/test/github/afranche/posture
+
+[codacy-badge]: https://app.codacy.com/project/badge/Grade/a998279965c94c9eab855019987f661a
+[codacy-link]: https://app.codacy.com/gh/afranche/posture/dashboard
