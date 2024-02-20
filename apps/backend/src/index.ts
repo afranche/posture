@@ -1,6 +1,6 @@
 import { Elysia } from "elysia";
 
-const app = new Elysia()
+const app: Elysia = new Elysia()
   .get("/", () => "Hello Elysia")
   .listen({ hostname: "0.0.0.0", port: 3000 });
 
