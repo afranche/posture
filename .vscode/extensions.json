@@ -1,6 +1,7 @@
 {
     "recommendations": [
         "oven.bun-vscode",
-        "editorconfig.editorconfig"
+        "editorconfig.editorconfig",
+        "bradlc.vscode-tailwindcss"
     ]
 }
