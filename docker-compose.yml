@@ -17,10 +17,10 @@ services:
   # TODO: Add a migration step for prisma.
   dependencies:
     image: oven/bun:1.0-alpine
-    command: bun install
+    command: bun install --frozen-lockfile
     volumes:
       - ./apps:/posture/apps
-      - ./bun.lockb:/posture/bun.lockb
+      - ./bun.lockb:/posture/bun.lockb:ro
       - ./libs:/posture/libs
       - ./node_modules:/posture/node_modules
       - ./package.json:/posture/package.json
@@ -39,9 +39,9 @@ services:
       - 3000:3000
     volumes:
       - ./apps:/posture/apps
-      - ./bun.lockb:/posture/bun.lockb
+      - ./bun.lockb:/posture/bun.lockb:ro
       - ./libs:/posture/libs
-      - ./node_modules:/posture/node_modules
+      - ./node_modules:/posture/node_modules:ro
       - ./package.json:/posture/package.json
     working_dir: /posture
   frontend:
@@ -54,9 +54,9 @@ services:
       - 3001:3001
     volumes:
       - ./apps:/posture/apps
-      - ./bun.lockb:/posture/bun.lockb
+      - ./bun.lockb:/posture/bun.lockb:ro
       - ./libs:/posture/libs
-      - ./node_modules:/posture/node_modules
+      - ./node_modules:/posture/node_modules:ro
       - ./package.json:/posture/package.json
     working_dir: /posture
 volumes:

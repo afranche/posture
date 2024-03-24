@@ -1,0 +1,39 @@
+---
+interface Props {
+	title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content="Astro description" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+	</head>
+	<body>
+		<slot />
+
+    <!-- Loading Icons in the Astro app prevents React to use Iconify's web component -->
+    <script
+      src="https://code.iconify.design/iconify-icon/2.0.0/iconify-icon.min.js"
+      integrity="sha384-p0eCq+aVRprbSIUcd5JzeLuaAkPWgbssqwIlIue1ghYzNxej+1oZtPdgZLw7ccMH"
+      crossorigin="anonymous"></script>
+	</body>
+</html>
+
+<style is:global>
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  @apply bg-white text-zinc-950;
+
+}
+</style>
