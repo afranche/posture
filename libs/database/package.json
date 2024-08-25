@@ -1,17 +1,18 @@
 {
-  "name": "database",
-  "module": "index.ts",
+  "name": "@posture/database",
   "type": "module",
-  "main": "./index.ts",
-  "types": "./index.ts",
+  "main": "src/index.ts",
   "devDependencies": {
+    "@posture/eslint-config": "workspace:*",
     "@types/bun": "latest",
-    "prisma": "^5.9.1"
+    "eslint": "^9.9.0"
   },
   "peerDependencies": {
     "typescript": "^5.0.0"
   },
   "dependencies": {
-    "@prisma/client": "^5.9.1"
+    "pg": "^8.12.0",
+    "pg-hstore": "^2.3.4",
+    "sequelize": "^6.37.3"
   }
 }
