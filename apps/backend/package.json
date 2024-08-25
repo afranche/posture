@@ -1,16 +1,18 @@
 {
   "name": "@posture/backend",
   "version": "0.1.0",
-  "type":"module",
+  "type": "module",
+  "main": "src/index.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "bun run --watch src/index.ts"
   },
   "dependencies": {
+    "@posture/database": "workspace:*",
     "elysia": "latest"
   },
   "devDependencies": {
+    "@posture/eslint-config": "workspace:*",
     "bun-types": "latest"
-  },
-  "module": "src/index.js"
+  }
 }
