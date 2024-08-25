@@ -26,6 +26,17 @@
         in
           pkgs.devshell.mkShell {
             devshell.name = "posture";
+            devshell.motd = ''
+            {bold}{219}
+               ________  ________  ________  ________  ________  ________  ________
+              ╱        ╲╱        ╲╱        ╲╱        ╲╱    ╱   ╲╱        ╲╱        ╲  *
+             ╱    x    ╱    /    ╱      ___╱__    ___╱    ╱    ╱         ╱       __╱    *
+            ╱╱      __╱    /    ╱---      ╱  ╱   ╱  ╱         ╱        _╱       __╱  *
+            ╲╲_____╱  ╲________╱╲________╱   ╲__╱   ╲________╱╲____╱___╱╲________╱    *
+
+            Get up and stretch once in a while !{reset}
+            $(type -p menu &>/dev/null && menu)
+            '';
             devshell.packages = with pkgs; [
               nodejs_20 # https://github.com/oven-sh/bun/issues/158
               bun
