@@ -39,7 +39,6 @@
             '';
             devshell.packages = with pkgs; [
               nodejs_20 # https://github.com/oven-sh/bun/issues/158
-              bun
             ];
           };
       });

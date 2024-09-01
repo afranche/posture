@@ -23,5 +23,6 @@
   "workspaces": [
     "apps/*",
     "libs/*"
-  ]
+  ],
+  "packageManager": "yarn@4.4.1"
 }

@@ -9,10 +9,12 @@
   },
   "dependencies": {
     "@posture/database": "workspace:*",
+    "bun": "^1.1.26",
     "elysia": "latest"
   },
   "devDependencies": {
     "@posture/eslint-config": "workspace:*",
+    "@types/bun": "^1",
     "bun-types": "latest"
   }
 }
