@@ -15,7 +15,8 @@ const config = {
         "database",
         "server",
         "utils",
-        "devxp"
+        "devxp",
+        "deps"
       ]
     ]
   },
